@@ -390,7 +390,7 @@ Thumbnails are saved to `thumbnails/` (or your specified directory) with filenam
 
 1. **Clone or Download**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/gauravkhatriweb/Thar-Studio---YT-Thumbnail-Extractor.git
    cd yt-thumbnail-extractor
    ```
 
