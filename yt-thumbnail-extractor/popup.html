@@ -1,0 +1,100 @@
+<!--
+  ┌───────────────────────────────────────────────────────────────┐
+  │  YT Thumbnail Extractor – Thar Studio Edition (Version 1)      │
+  │  Licensed Product - Unauthorized usage strictly prohibited     │
+  │  For licensing contact: Thar Studio                            │
+  │  Open for collaboration & contributions (credit guaranteed)    │
+  └───────────────────────────────────────────────────────────────┘
+  
+  Licensed by Thar Studio — Illegal usage prohibited.
+  For credits, contributions, and licensing: Contact Thar Studio.
+  This project is 100% free for everyone for a lifetime.
+  
+  Main popup UI for the extension.
+  Contains two tabs: Single (functional) and Bulk (placeholder).
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT Thumbnail Extractor – Thar Studio</title>
+    
+    <!-- Google Fonts: Inter (Thar Studio typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main app container -->
+    <div id="app">
+      <div class="popup-root container">
+        <!-- Header: Brand and title -->
+        <header class="header">
+          <div class="brand">
+            <span class="brand-accent">Thar</span> Studio
+          </div>
+          <div class="title">YT Thumbnail Extractor</div>
+        </header>
+
+        <!-- Tab navigation: Single / Bulk -->
+        <nav class="tabs">
+          <button class="tab active" data-tab="single-tab">Single</button>
+          <button class="tab" data-tab="bulk-tab">Bulk</button>
+        </nav>
+
+        <!-- Tab content panels -->
+        <main class="tab-content">
+          <!-- Single Thumbnail Tab (Fully Functional) -->
+          <section id="single-tab" class="tab-panel active">
+            <div class="section">
+              <label for="yt-url" class="label">YouTube Video URL</label>
+              <input
+                id="yt-url"
+                type="text"
+                class="input"
+                placeholder="Paste a YouTube video URL here"
+                autocomplete="off"
+              />
+              <button id="extract-btn" class="primary-button">Extract Thumbnails</button>
+              
+              <!-- Status and error messages (aria-live for screen readers) -->
+              <p id="status-message" class="status-message" aria-live="polite"></p>
+              <p id="error-message" class="error-message" aria-live="polite"></p>
+            </div>
+
+            <!-- Thumbnails container: dynamically populated by popup.js -->
+            <div id="thumbnails-container" class="thumbnails-container">
+              <!-- Thumbnails will be injected here -->
+            </div>
+          </section>
+
+          <!-- Bulk Thumbnails Tab (Placeholder Only - Coming in v2) -->
+          <section id="bulk-tab" class="tab-panel">
+            <div class="section section-centered">
+              <h2 class="coming-soon-title">Bulk Thumbnails</h2>
+              <p class="coming-soon-text">Bulk downloading coming soon in v2.</p>
+              <p class="coming-soon-subtext">
+                You&rsquo;ll be able to paste multiple URLs or playlists and download all thumbnails in one go.
+              </p>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer: Thar Studio watermark -->
+        <footer class="footer">
+          <span class="watermark">Made by Thar Studio</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Main popup logic -->
+    <script src="popup.js"></script>
+  </body>
+</html>

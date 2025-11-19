@@ -1,0 +1,5 @@
+# Licensed by Thar Studio — Illegal usage prohibited.
+# For credits, contributions, and licensing: Contact Thar Studio.
+# This project is 100% free for everyone for a lifetime.
+
+requests>=2.31.0,<3.0.0
